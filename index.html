@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المتابعة النصف سنوية لأهداف المساعدات الإداريات</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style id="css">
+:root{--g:#0f5a4a;--g2:#13785f;--gl:#e6f2ed;--gold:#c79a3b;--goldl:#f7efdc;--navy:#1f3f7a;--teal:#178a8a;--ink:#1f2a2e;--mute:#76838a;--line:#e3ded2;--bg:#f7f4ee;--ok:#16835a;--ok-l:#e2f4ea;--no:#c0453b;--no-l:#fbe7e5;--hdr:#e4ece7;--goal:#d9dee2}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Tajawal',system-ui,sans-serif;color:var(--ink);background:var(--bg);font-size:15px}
+button,input,textarea{font-family:inherit;font-size:inherit;color:inherit}
+.hero{background:linear-gradient(135deg,#0b4639 0%,var(--g2) 100%);color:#fff;padding:18px 16px 54px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 120%,rgba(199,154,59,.35),transparent 45%),radial-gradient(circle at 95% -20%,rgba(255,255,255,.12),transparent 40%);pointer-events:none}
+.hero-in{max-width:1200px;margin:0 auto;position:relative;z-index:1;display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.hero .k{font-size:12px;color:#cfe6dd;letter-spacing:0}
+.hero h1{margin:4px 0 0;font-size:20px;font-weight:800;line-height:1.4}
+.hero h1 input{width:62px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:6px;color:#fff;text-align:center;font-weight:800;padding:0 4px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer;font-weight:700}
+.hero .btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff}
+.hero .btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.hero .btn.white{background:#fff;color:var(--g);border-color:#fff}
+.btn.danger{color:var(--no);background:#fff}
+.btn.danger.arm{background:var(--no);color:#fff;border-color:var(--no)}
+.btn:disabled{opacity:.5;cursor:default}
+.status{font-size:12px;color:#cfe6dd;width:100%}
+.status.dirty{color:#ffd98a;font-weight:700}
+.wrap{max-width:1200px;margin:-38px auto 0;padding:0 14px 30px;position:relative;z-index:2}
+.emps{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:thin}
+.emp{flex:none;width:210px;background:#fff;border:2px solid transparent;border-radius:14px;padding:10px 12px;cursor:pointer;text-align:right;box-shadow:0 2px 10px rgba(15,90,74,.08);display:flex;gap:10px;align-items:center}
+.emp.on{border-color:var(--gold)}
+.av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gl);color:var(--g);display:grid;place-items:center;font-weight:800;font-size:16px}
+.emp.on .av{background:var(--g);color:#fff}
+.emp .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.emp .jb{font-size:12px;color:var(--mute)}
+.emp .mb{height:4px;background:#eee;border-radius:4px;margin-top:5px;overflow:hidden}.emp .mb i{display:block;height:100%;background:var(--gold)}
+.emp.add{justify-content:center;border:2px dashed #d6ccb5;box-shadow:none;background:#fffdf8;color:var(--gold);font-weight:800;width:130px}
+.emp .tx{min-width:0;flex:1}
+.banner{background:#fff6e0;border:1px solid #f0d48a;border-radius:12px;padding:10px 12px;margin:0 0 12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.card{background:#fff;border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:0 2px 14px rgba(31,42,46,.05)}
+.prof{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.ring{flex:none;width:118px;height:118px;border-radius:50%;display:grid;place-items:center;position:relative}
+.ring:before{content:"";position:absolute;inset:11px;background:#fff;border-radius:50%}
+.ring b{position:relative;font-size:26px;font-weight:800;color:var(--g)}
+.ring small{position:relative;display:block;font-size:11px;color:var(--mute);text-align:center;margin-top:-4px}
+.ring .in{position:relative;text-align:center}
+.pf{flex:1;min-width:240px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.fld label{display:block;font-size:12px;color:var(--mute);margin-bottom:3px;font-weight:500}
+.fld input,.fld textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:#fcfbf8}
+.fld input:focus,.fld textarea:focus,.tile input:focus,.gdesc:focus{outline:2px solid var(--gold);outline-offset:-1px;background:#fff}
+.pills{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.pill{border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700}
+.pill.ok{background:var(--ok-l);color:var(--ok)}.pill.no{background:var(--no-l);color:var(--no)}.pill.em{background:#f1eee7;color:var(--mute)}
+.sec{display:flex;align-items:center;justify-content:space-between;margin:20px 2px 10px;gap:8px;flex-wrap:wrap}
+.sec h2{margin:0;font-size:17px;font-weight:800;color:var(--g)}
+.legend{display:flex;gap:10px;font-size:12px;color:var(--mute);align-items:center}
+.legend span{display:inline-flex;align-items:center;gap:4px}
+.dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.goals{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.gcard{background:#fff;border-radius:18px;padding:14px;box-shadow:0 2px 14px rgba(31,42,46,.05);border-top:4px solid var(--g)}
+.gh{display:flex;align-items:center;gap:10px}
+.num{flex:none;width:34px;height:34px;border-radius:10px;background:var(--goldl);color:var(--gold);display:grid;place-items:center;font-weight:800}
+.gh h3{margin:0;font-size:15px;font-weight:800;flex:1}
+.gh .cnt{font-size:12px;color:var(--mute);font-weight:700}
+.gdesc{display:block;width:100%;margin:10px 0 8px;field-sizing:content;line-height:1.5;border:1px dashed #d9d1bf;border-radius:10px;padding:7px 10px;font-size:13px;background:#fcfbf8;resize:vertical;min-height:38px}
+.gbar{height:6px;border-radius:6px;background:#f0ece3;overflow:hidden;display:flex;margin-bottom:10px}
+.gbar i{display:block;height:100%}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{border:1px solid var(--line);border-radius:12px;padding:6px;background:#fcfbf8;display:flex;flex-direction:column;gap:5px}
+.tile.ok{background:var(--ok-l);border-color:#bfe3cf}.tile.no{background:var(--no-l);border-color:#efc4bf}
+.tb{display:flex;align-items:center;justify-content:space-between;border:none;background:transparent;cursor:pointer;padding:2px 2px;font-size:12px;font-weight:700;color:var(--ink);width:100%}
+.ic{width:22px;height:22px;border-radius:50%;border:2px solid #cfc6b3;display:grid;place-items:center;font-size:12px;font-weight:800;background:#fff}
+.tile.ok .ic{background:var(--ok);border-color:var(--ok);color:#fff}
+.tile.no .ic{background:var(--no);border-color:var(--no);color:#fff}
+.tile .lb{font-size:10.5px;color:var(--mute);font-weight:700}
+.tile.ok .lb{color:var(--ok)}.tile.no .lb{color:var(--no)}
+.tile input{border:1px solid transparent;border-radius:8px;padding:4px 6px;font-size:12px;width:100%;background:rgba(255,255,255,.75)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.foot{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;justify-content:space-between}
+.hint{font-size:12px;color:var(--mute)}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;z-index:50;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+@media (max-width:600px){.hero h1{font-size:17px}.goals{grid-template-columns:1fr}.ring{width:96px;height:96px}.ring b{font-size:22px}}
+.gnl{display:block;font-size:12px;font-weight:700;color:var(--g);margin:10px 2px 4px}
+.gnote{display:block;width:100%;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:13px;background:#fffdf6;resize:vertical;min-height:44px}
+.gnote:focus{outline:2px solid var(--gold);outline-offset:-1px;background:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.kpi{border-radius:14px;padding:10px 12px;background:#fcfbf8;border:1px solid var(--line)}
+.kpi .kh{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--g);margin-bottom:6px}
+.kpi .ki{font-size:15px}
+.kpi input{width:100%;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;font-size:16px;font-weight:700}
+.kpi input:focus{outline:2px solid var(--gold);outline-offset:-1px}
+.k-growth{background:var(--gl);border-color:#cfe5db}.k-absExc{background:var(--goldl);border-color:#ecdcb5}.k-absNo{background:var(--no-l);border-color:#efc4bf}.k-absNo .kh{color:var(--no)}.k-absExc .kh{color:#9a7424}.k-late{background:#f3ecf8;border-color:#e0d0ec}.k-late .kh{color:#6b3f8f}.k-assembly{background:#e8eef8;border-color:#cdd9ee}.k-assembly .kh{color:var(--navy)}
+/* ---- printable sheet (rendered off-screen for PDF) ---- */
+#printHost{position:fixed;left:-20000px;top:0;pointer-events:none}
+.sheet{width:1123px;height:794px;background:#fff;padding:26px 30px 20px;font-family:'Tajawal',sans-serif;color:#1d2733;direction:rtl;position:relative;display:flex;flex-direction:column}
+.sheet .band{position:absolute;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--navy),var(--teal))}
+.sheet .band.t{top:0}.sheet .band.b{bottom:0}
+.sheet .sh-h{text-align:center}
+.sheet .sh-min{color:var(--teal);font-weight:800;font-size:20px}
+.sheet .sh-en{color:#7b8790;font-size:11px;letter-spacing:0}
+.sheet .sh-t{font-weight:800;font-size:16px;margin-top:4px}
+.sheet table{border-collapse:collapse;width:100%}
+.sheet .info{margin-top:10px}
+.sheet .info td{border:1px solid #9aa6ae;padding:5px 8px;font-size:13px}
+.sheet .info td.k{background:var(--hdr);font-weight:700;width:160px}
+.sheet .g{margin-top:10px;table-layout:fixed}
+.sheet .g th,.sheet .g td{border:1px solid #9aa6ae;font-size:10.5px;padding:3px 2px;text-align:center;vertical-align:middle}
+.sheet .g thead th{background:var(--hdr);font-weight:800}
+.sheet .g thead tr.sub th{font-weight:500;font-size:10px;background:#eef3f0}
+.sheet .g .gc{background:var(--goal);font-weight:800;width:215px;text-align:right;padding:3px 5px}
+.sheet .g .gc small{display:block;font-weight:400;font-size:9px;line-height:1.35;color:#3d4954;white-space:pre-line}
+.sheet .g td{height:44px}
+.sheet .st{display:inline-block;padding:2px 6px;border-radius:4px;font-weight:700;font-size:10px}
+.sheet .st.ok{background:var(--ok-l);color:var(--ok)}
+.sheet .st.no{background:var(--no-l);color:var(--no)}
+.sheet .st.na{color:#b0b8be}
+.sheet .dt{font-size:10px;line-height:1.25;word-break:break-word}
+.sheet .bot{display:flex;gap:16px;margin-top:12px;align-items:flex-start}
+.sheet .notes{flex:1.4;min-height:110px;border:1px solid #9aa6ae;border-radius:6px;padding:6px 10px;font-size:12px;white-space:pre-wrap;line-height:1.6}
+.sheet .notes b{display:block;margin-bottom:2px}
+.sheet .sig{flex:1;font-size:13px;display:flex;flex-direction:column;gap:12px}
+.sheet .sig div b{font-weight:800}
+.sheet .xk{flex:1}.sheet .xk table{width:100%}.sheet .xk td{border:1px solid #9aa6ae;padding:4px 8px;font-size:12px}.sheet .xk td.k{background:var(--hdr);font-weight:700;width:140px}
+.sheet .extra{margin-top:8px;font-size:12px;white-space:pre-wrap;border-top:1px dashed #b7c1c8;padding-top:6px;line-height:1.6}
+@media (max-width:600px){main{padding:10px}.card{padding:12px}.top h1{font-size:15px}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="application/json" id="state">{"year": "2026", "principal": "منى الزهراني", "employees": [{"id": "e1", "name": "أمل عبد الله يوسف اليوسف", "job": "مسجلة معلومات", "day": "الخميس", "date": "18/12/1447هـ", "goals": [{"t": "إصدار عدد (2) كشوف بأسماء الطالبات لكل مرحلة نهاية الأسبوع الثاني من كل فصل دراسي\nالمستهدف: 2 كشف · الوزن النسبي: 15%", "r": [{"s": "ok", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}]}, {"t": "إعداد عدد (6) إحصائيات عامة لجميع بيانات المدرسة تحدث بشكل دوري بمعدل (3) كل فصل دراسي خلال العام 2026م\nالمستهدف: 6 إحصائية · الوزن النسبي: 20%", "r": [{"s": "ok", "d": ""}, {"s": "ok", "d": ""}, {"s": "ok", "d": ""}, {"s": "ok", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}]}, {"t": "إعداد (9) تقارير خاصة بمنصة مدرستي بمعدل تقرير كل شهر خلال العام الحالي 2026م\nالمستهدف: 9 تقرير · الوزن النسبي: 20%", "r": [{"s": "ok", "d": "يناير"}, {"s": "ok", "d": "فبراير"}, {"s": "ok", "d": "مارس"}, {"s": "ok", "d": "أبريل"}, {"s": "ok", "d": "مايو"}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}]}, {"t": "إعداد (2) تقارير إحصائية لنتائج الطالبات بمعدل تقرير واحد لكل فصل دراسي خلال العام 2026م\nالمستهدف: 2 تقرير · الوزن النسبي: 15%", "r": [{"s": "ok", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}]}, {"t": "تطوير مهارات المستفيدين من خلال تنفيذ (3) ممارسات نقل خبرة خلال العام 2026م\nالمستهدف: 3 ممارسة · الوزن النسبي: 15%", "r": [{"s": "ok", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}]}, {"t": "إعداد (2) جداول في نظام نور خلال العام 2026م بمعدل جدول كل فصل دراسي\nالمستهدف: 2 جدول · الوزن النسبي: 15%", "r": [{"s": "ok", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}]}], "notes": "- نرجو الاستمرار في تطوير المبادرات الرقمية التي تدعم جودة العمل.\n- الاستمرار في تبادل الخبرات والممارسات المتميزة وتوثيق المنجزات بصورة تعكس الجهود المبذولة.", "growth": "8 دورات تدريبية", "absExc": "3", "absNo": "", "assembly": "30 من 31", "late": ""}, {"id": "e2", "name": "أحلام محمد حمود آل ضباح", "job": "مراقبة", "day": "الخميس", "date": "18/12/1447هـ", "goals": [{"t": "إعداد (2) تقرير إحصائية غياب الطالبات خلال العام الدراسي بمعدل (1) لكل فصل دراسي العام 2026م\nالمستهدف: 2 تقرير · الوزن النسبي: 30%", "r": [{"s": "ok", "d": "ف1 1447هـ"}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}], "n": ""}, {"t": "حصر وتسليم (2) إحصائية مخالفات الطالبات بمعدل إحصائية (1) لكل فصل دراسي العام الدراسي 2026م\nالمستهدف: 2 إحصائية · الوزن النسبي: 20%", "r": [{"s": "ok", "d": "ف1 1447هـ"}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}], "n": ""}, {"t": "حصر وتسليم (2) إحصائية تأخير المعلمات في السجل ورفعها للإدارة المدرسية بمعدل إحصائية (1) لكل فصل دراسي العام الدراسي 2026م\nالمستهدف: 2 إحصائية · الوزن النسبي: 25%", "r": [{"s": "ok", "d": "ف1 1447هـ"}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}], "n": ""}, {"t": "المساهمة في تعزيز انضباط الطالبات من خلال تنفيذ برنامجين بمعدل برنامج لكل فصل دراسي العام 2026م\nالمستهدف: 2 برنامج · الوزن النسبي: 25%", "r": [{"s": "ok", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}], "n": ""}, {"t": "", "r": [{"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}], "n": ""}, {"t": "", "r": [{"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}, {"s": "", "d": ""}], "n": ""}], "notes": "نشكر جهودك الواضحة في متابعة انضباط الطالبات وانتظام سير العمل اليومي، كما نأمل خلال الفترة القادمة زيادة توظيف التطبيقات الرقمية في إعداد المتابعة والرصد، وإعداد التقارير بما يعزز كفاءة الأداء وجودة المخرجات.", "growth": "", "absExc": "1", "absNo": "", "late": "193", "assembly": "2 من 31"}]}</script>
+</head>
+<body>
+<div id="root"></div>
+<div id="printHost"></div>
+<div class="toast" id="toast"></div>
+<script id="app">
+(function(){
+var ORD=['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع'];
+var NG=6,NR=9,DRAFT_KEY='admin-goals-draft-v1';
+var embedded=document.getElementById('state').textContent;
+var state=JSON.parse(embedded);
+var XF=['growth','absExc','absNo','late','assembly'];
+function mig(st){(st.employees||[]).forEach(function(e){XF.forEach(function(k){if(e[k]==null)e[k]='';});(e.goals||[]).forEach(function(g){if(g.n==null)g.n='';});});return st;}
+mig(state);
+var STORE='admin-goals-data-v1';var seed=JSON.parse(embedded);try{var sv=localStorage.getItem(STORE);if(sv){state=mig(JSON.parse(sv));seed.employees.forEach(function(se){state.employees.forEach(function(e){if(e.id===se.id)e.goals.forEach(function(g,i){if(!g.t&&se.goals[i]&&se.goals[i].t)g.t=se.goals[i].t;});});});var seen=state.seenSeed||state.employees.map(function(e){return e.id;});seed.employees.forEach(function(se){if(seen.indexOf(se.id)<0&&!state.employees.some(function(e){return e.id===se.id;}))state.employees.push(mig({employees:[se]}).employees[0]);});state.seenSeed=seed.employees.map(function(e){return e.id;});}}catch(e){}
+var cur=0,dirty=false,saving=false,artifactCap=null,downloadsCap=null,capsReady=false,draftOffer=null;
+
+function blankEmp(){var g=[];for(var i=0;i<NG;i++){var r=[];for(var j=0;j<NR;j++)r.push({s:'',d:''});g.push({t:'',r:r,n:''});}
+  return {id:'e'+Date.now().toString(36),name:'',job:'',day:'',date:'',goals:g,notes:'',growth:'',absExc:'',absNo:'',late:'',assembly:''};}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function counts(e){var ok=0,no=0;e.goals.forEach(function(g){g.r.forEach(function(c){if(c.s==='ok')ok++;else if(c.s==='no')no++;});});return {ok:ok,no:no,pc:Math.round(ok*100/(NG*NR))};}
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove('show');},3200);}
+
+
+
+var storeOK=true;function markDirty(){try{localStorage.setItem(STORE,JSON.stringify(state));storeOK=true;dirty=false;}catch(e){storeOK=false;dirty=true;}updateStatus();}
+function updateStatus(){var s=document.getElementById('st');if(!s)return;
+  if(saving){s.textContent='جارٍ الحفظ…';s.className='status';return;}
+  if(dirty){s.textContent='تعذّر الحفظ التلقائي — احفظي نسخة احتياطية';s.className='status dirty';}
+  else{s.textContent='تُحفظ التعديلات تلقائيًا في هذا المتصفح';s.className='status';}
+  var b=document.getElementById('saveBtn');if(b)b.disabled=!dirty||saving;}
+
+function initial(n){n=(n||'').trim();return n?n.charAt(0):'؟';}
+function ringStyle(c){var t=NG*NR,a=c.ok*360/t,b=a+c.no*360/t;return 'background:conic-gradient(var(--ok) 0 '+a+'deg,var(--no) '+a+'deg '+b+'deg,#efe9dd '+b+'deg 360deg)';}
+function goalCnt(g){var ok=0,no=0;g.r.forEach(function(r){if(r.s==='ok')ok++;else if(r.s==='no')no++;});return {ok:ok,no:no};}
+function gbar(g){var c=goalCnt(g);return '<i style="width:'+(c.ok*100/NR)+'%;background:var(--ok)"></i><i style="width:'+(c.no*100/NR)+'%;background:var(--no)"></i>';}
+function tileHTML(r,gi,ri){var ic=r.s==='ok'?'✓':r.s==='no'?'✕':'',lb=r.s==='ok'?'تم':r.s==='no'?'لم يتم':'—';
+  return '<div class="tile '+r.s+'" id="t'+gi+'_'+ri+'"><button class="tb" data-g="'+gi+'" data-r="'+ri+'" data-cyc="1"><span>التقرير '+ORD[ri]+'<br><span class="lb">'+lb+'</span></span><span class="ic">'+ic+'</span></button><input data-g="'+gi+'" data-r="'+ri+'" data-d="1" value="'+esc(r.d)+'" placeholder="التاريخ"></div>';}
+function render(){
+  var e=state.employees[cur];var root=document.getElementById('root');var h='';
+  h+='<div class="hero"><div class="hero-in"><div><div class="k">وزارة التعليم · المساعدات الإداريات</div><h1>المتابعة النصف سنوية لأهداف المساعد الإداري للعام <input data-top="year" value="'+esc(state.year)+'">م</h1></div><div class="acts">';
+  if(capsReady&&artifactCap)h+='<button class="btn gold" id="saveBtn" data-act="save">حفظ</button>';
+  if(capsReady&&downloadsCap)h+='<button class="btn white" data-act="pdf">تصدير PDF</button><button class="btn" data-act="pdfall">PDF للجميع</button><button class="btn" data-act="backup">نسخة احتياطية</button><button class="btn" data-act="import">استيراد</button>';
+  h+='<span class="status" id="st"></span></div></div></div><div class="wrap">';
+  h+='<div class="emps">';
+  state.employees.forEach(function(x,i){var c=counts(x);h+='<button class="emp'+(i===cur?' on':'')+'" data-emp="'+i+'"><span class="av">'+esc(initial(x.name))+'</span><span class="tx"><div class="nm">'+esc(x.name||'موظفة جديدة')+'</div><div class="jb">'+esc(x.job||'—')+' · '+c.pc+'%</div><div class="mb"><i style="width:'+(c.ok*100/(NG*NR))+'%"></i></div></span></button>';});
+  h+='<button class="emp add" data-act="add">+ موظفة</button></div>';
+  if(draftOffer)h+='<div class="banner">لديك تعديلات غير محفوظة من زيارة سابقة على هذا الجهاز. <button class="btn" data-act="restore">استعادتها</button><button class="btn" data-act="discard">تجاهلها</button></div>';
+  if(!e){root.innerHTML=h+'<div class="card">لا توجد موظفات. أضيفي موظفة جديدة.</div></div>';updateStatus();return;}
+  var c=counts(e);
+  h+='<div class="card prof"><div class="ring" id="ring" style="'+ringStyle(c)+'"><div class="in"><b id="pc">'+c.pc+'%</b><small>نسبة الإنجاز</small></div></div><div style="flex:1;min-width:240px"><div class="pf">'+fld('name','اسم المساعد الإداري',e.name)+fld('job','الوظيفة',e.job)+fld('day','اليوم',e.day)+fld('date','التاريخ',e.date)+'</div><div class="pills" id="pills">'+pills(c)+'</div></div></div>';
+  h+='<div class="sec"><h2>الأهداف والتقارير</h2><div class="legend"><span><i class="dot" style="background:var(--ok)"></i>تم</span><span><i class="dot" style="background:var(--no)"></i>لم يتم</span><span>اضغطي على التقرير لتغيير حالته</span></div></div><div class="goals">';
+  e.goals.forEach(function(g,gi){var gc=goalCnt(g);
+    h+='<div class="gcard"><div class="gh"><span class="num">'+(gi+1).toLocaleString('ar-SA')+'</span><h3>الهدف '+ORD[gi]+'</h3><span class="cnt" id="gc'+gi+'">'+gc.ok+' من '+NR+'</span></div><textarea class="gdesc" rows="3" data-gt="'+gi+'" placeholder="وصف الهدف (اختياري)">'+esc(g.t)+'</textarea><div class="gbar" id="gb'+gi+'">'+gbar(g)+'</div><div class="tiles">';
+    g.r.forEach(function(r,ri){h+=tileHTML(r,gi,ri);});h+='</div><label class="gnl">ملاحظات الهدف</label><textarea class="gnote" rows="2" data-gn="'+gi+'" placeholder="اكتبي ملاحظاتك على هذا الهدف…">'+esc(g.n)+'</textarea></div>';});
+  h+='</div><div class="sec"><h2>الملاحظات والاعتماد</h2></div><div class="card"><div class="kpis">'+kpi('growth','النمو المهني','📚',e.growth,'مثال: 8 دورات تدريبية')+kpi('absExc','الغياب بعذر','📄',e.absExc,'عدد الأيام')+kpi('absNo','الغياب بدون عذر','⚠️',e.absNo,'عدد الأيام')+kpi('late','التأخير الصباحي (بالدقائق)','⏰',e.late,'عدد دقائق التأخير')+kpi('assembly','حضور الطابور الصباحي','🌅',e.assembly,'مثال: 30 من 31')+'</div></div><div class="card">'+area('notes','ملاحظات',e.notes,4)+'</div>';
+  h+='<div class="card foot"><div class="fld" style="flex:1;min-width:220px"><label>مديرة المدرسة</label><input data-top="principal" value="'+esc(state.principal)+'"></div><div class="acts"><button class="btn" data-act="dup">نسخ النموذج لموظفة جديدة</button><button class="btn danger" data-act="del">حذف هذه الموظفة</button></div></div></div>';
+  root.innerHTML=h;updateStatus();
+}
+function pills(c){var em=NG*NR-c.ok-c.no;return '<span class="pill ok">تم: '+c.ok+'</span><span class="pill no">لم يتم: '+c.no+'</span><span class="pill em">لم يُقيَّم: '+em+'</span>';}
+function kpi(k,l,ic,v,ph){return '<div class="kpi k-'+k+'"><div class="kh"><span class="ki">'+ic+'</span>'+l+'</div><input data-f="'+k+'" value="'+esc(v)+'" placeholder="'+ph+'"></div>';}
+function fld(k,l,v){return '<div class="fld"><label>'+l+'</label><input data-f="'+k+'" value="'+esc(v)+'"></div>';}
+function area(k,l,v,r){return '<div class="fld"><label>'+l+'</label><textarea data-f="'+k+'" rows="'+r+'">'+esc(v)+'</textarea></div>';}
+function refreshCounts(){var e=state.employees[cur],c=counts(e);
+  var p=document.getElementById('pills');if(p)p.innerHTML=pills(c);
+  var pc=document.getElementById('pc');if(pc)pc.textContent=c.pc+'%';
+  var rg=document.getElementById('ring');if(rg)rg.setAttribute('style',ringStyle(c));
+  var chip=document.querySelector('.emp[data-emp="'+cur+'"]');
+  if(chip)chip.innerHTML='<span class="av">'+esc(initial(e.name))+'</span><span class="tx"><div class="nm">'+esc(e.name||'موظفة جديدة')+'</div><div class="jb">'+esc(e.job||'—')+' · '+c.pc+'%</div><div class="mb"><i style="width:'+(c.ok*100/(NG*NR))+'%"></i></div></span>';}
+
+document.addEventListener('input',function(ev){var t=ev.target,e=state.employees[cur];if(!e&&!t.dataset.top)return;
+  if(t.dataset.f){e[t.dataset.f]=t.value;if(t.dataset.f==='name'||t.dataset.f==='job')refreshCounts();}
+  else if(t.dataset.top){state[t.dataset.top]=t.value;}
+  else if(t.dataset.gt!=null){e.goals[+t.dataset.gt].t=t.value;}
+  else if(t.dataset.gn!=null){e.goals[+t.dataset.gn].n=t.value;}
+  else if(t.dataset.d){e.goals[+t.dataset.g].r[+t.dataset.r].d=t.value;}
+  else return;markDirty();});
+
+document.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
+  if(b.dataset.emp!=null){cur=+b.dataset.emp;render();window.scrollTo(0,0);return;}
+  if(b.dataset.cyc){var gi=+b.dataset.g,ri=+b.dataset.r,cell=state.employees[cur].goals[gi].r[ri];cell.s=cell.s===''?'ok':cell.s==='ok'?'no':'';
+    var t=document.getElementById('t'+gi+'_'+ri);var tmp=document.createElement('div');tmp.innerHTML=tileHTML(cell,gi,ri);t.replaceWith(tmp.firstChild);
+    var g=state.employees[cur].goals[gi];document.getElementById('gb'+gi).innerHTML=gbar(g);document.getElementById('gc'+gi).textContent=goalCnt(g).ok+' من '+NR;
+    refreshCounts();markDirty();return;}
+  var a=b.dataset.act;if(!a)return;
+  if(a==='add'){state.employees.push(blankEmp());cur=state.employees.length-1;markDirty();render();toast('تمت إضافة موظفة جديدة');}
+  else if(a==='dup'){var src=state.employees[cur],n=JSON.parse(JSON.stringify(src));n.id='e'+Date.now().toString(36);n.name='';n.goals.forEach(function(g){g.n='';g.r.forEach(function(r){r.s='';r.d='';});});n.notes='';XF.forEach(function(k){n[k]='';});
+    state.employees.push(n);cur=state.employees.length-1;markDirty();render();toast('نُسخ النموذج بأوصاف الأهداف — أدخلي اسم الموظفة');}
+  else if(a==='del'){if(!b.classList.contains('arm')){b.classList.add('arm');b.textContent='اضغطي مرة أخرى لتأكيد الحذف';setTimeout(function(){if(b.isConnected){b.classList.remove('arm');b.textContent='حذف هذه الموظفة';}},3500);return;}
+    state.employees.splice(cur,1);cur=Math.max(0,cur-1);markDirty();render();toast('تم الحذف');}
+  else if(a==='restore'){try{state=mig(JSON.parse(draftOffer));}catch(e){}draftOffer=null;cur=0;dirty=true;render();}
+  else if(a==='discard'){draftOffer=null;try{localStorage.removeItem(DRAFT_KEY);}catch(e){}render();}
+  else if(a==='save')save();
+  else if(a==='backup'){var dt=new Date().toISOString().slice(0,10);downloadsCap.save({filename:'متابعة-الأهداف-'+dt+'.json',data:JSON.stringify(state,null,1)});toast('تم تنزيل النسخة الاحتياطية');}
+  else if(a==='import'){var fi=document.createElement('input');fi.type='file';fi.accept='.json,application/json';fi.onchange=function(){var f=fi.files[0];if(!f)return;var rd=new FileReader();rd.onload=function(){try{var ns=mig(JSON.parse(rd.result));if(!ns.employees)throw 0;state=ns;cur=0;markDirty();render();toast('تم استيراد البيانات');}catch(e){toast('الملف غير صالح');}};rd.readAsText(f);};fi.click();}
+  else if(a==='pdf')exportPDF([state.employees[cur]],b);
+  else if(a==='pdfall')exportPDF(state.employees,b);
+});
+
+/* ---------- save: republish the page with the new state embedded ---------- */
+function buildDoc(){
+  var json=JSON.stringify(state).replace(/</g,'\\u003c');
+  var css=document.getElementById('css').textContent,app=document.getElementById('app').textContent;
+  var C='<'+'/script>';
+  return '<!DOCTYPE html>\n<html lang="ar" dir="rtl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>'+document.title+'</title>\n'+
+   '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">\n<style id="css">'+css+'</style>\n'+
+   '<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">'+C+'\n<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">'+C+'\n'+
+   '<script type="application/json" id="state">'+json+C+'\n</head>\n<body>\n<div id="root"></div>\n<div id="printHost"></div>\n<div class="toast" id="toast"></div>\n<script id="app">'+app+C+'\n</body>\n</html>';
+}
+async function save(){if(!artifactCap||saving)return;saving=true;updateStatus();
+  try{await artifactCap.publish(buildDoc());try{localStorage.removeItem(DRAFT_KEY);}catch(e){}dirty=false;toast('تم الحفظ');}
+  catch(err){var c=err&&err.code;
+    if(c==='conflict')toast('عُدّلت الصفحة من مكان آخر؛ ستُحدَّث الآن. تعديلاتك محفوظة كمسودة على هذا الجهاز.');
+    else if(c==='not_granted'||c==='not_writer')toast('ليست لديك صلاحية الحفظ على هذه الصفحة.');
+    else toast('تعذّر الحفظ، حاولي مرة أخرى.');}
+  saving=false;updateStatus();}
+
+/* ---------- PDF ---------- */
+function goalNotes(e){var a=e.goals.map(function(g,i){return g.n&&g.n.trim()?'<div><b style="display:inline">الهدف '+ORD[i]+': </b>'+esc(g.n.trim())+'</div>':'';}).join('');return a?'<div class="extra"><b>ملاحظات الأهداف:</b>'+a+'</div>':'';}
+function sheetHTML(e){
+  var h='<div class="sheet"><div class="band t"></div><div class="band b"></div><div class="sh-h"><div class="sh-min">وزارة التعليم</div><div class="sh-en">Ministry of Education</div><div class="sh-t">المتابعة النصف سنوية لأهداف المساعد الإداري للعام '+esc(state.year)+'م</div></div>';
+  h+='<table class="info"><tr><td class="k">اسم المساعد الإداري</td><td>'+esc(e.name)+'</td><td class="k">اليوم</td><td style="width:200px">'+esc(e.day)+'</td></tr><tr><td class="k">الوظيفة</td><td>'+esc(e.job)+'</td><td class="k">التاريخ</td><td>'+esc(e.date)+'</td></tr></table>';
+  h+='<table class="g"><thead><tr><th class="gc" rowspan="2" style="text-align:center">الهدف</th>';
+  for(var j=0;j<NR;j++)h+='<th colspan="2">التقرير '+ORD[j]+'</th>';
+  h+='</tr><tr class="sub">';for(j=0;j<NR;j++)h+='<th>الإنجاز</th><th>التاريخ</th>';h+='</tr></thead><tbody>';
+  e.goals.forEach(function(g,gi){h+='<tr><td class="gc">'+ORD[gi]+(g.t?'<small>'+esc(g.t)+'</small>':'')+'</td>';
+    g.r.forEach(function(r){var s=r.s==='ok'?'<span class="st ok">تم</span>':r.s==='no'?'<span class="st no">لم يتم</span>':'<span class="st na">—</span>';
+      h+='<td>'+s+'</td><td class="dt">'+esc(r.d)+'</td>';});h+='</tr>';});
+  h+='</tbody></table><div class="bot"><div class="notes"><b>ملاحظات:</b>'+esc(e.notes)+goalNotes(e)+'</div>';
+  h+='<div class="xk"><table><tr><td class="k">النمو المهني</td><td>'+esc(e.growth)+'</td></tr><tr><td class="k">الغياب بعذر</td><td>'+esc(e.absExc)+'</td></tr><tr><td class="k">الغياب بدون عذر</td><td>'+esc(e.absNo)+'</td></tr><tr><td class="k">التأخير الصباحي</td><td>'+esc(e.late)+(e.late&&/^[0-9٠-٩]+$/.test(String(e.late).trim())?' دقيقة':'')+'</td></tr><tr><td class="k">حضور الطابور الصباحي</td><td>'+esc(e.assembly)+'</td></tr></table></div>';
+  h+='<div class="sig"><div><b>مديرة المدرسة / </b>'+esc(state.principal)+'</div><div><b>توقيع المساعد الإداري / </b>…………………………</div></div></div></div>';
+  return h;
+}
+async function exportPDF(list,btn){
+  if(!downloadsCap)return;if(!window.html2canvas||!window.jspdf){toast('أدوات التصدير لم تُحمَّل بعد، أعيدي المحاولة بعد لحظات.');return;}
+  if(!list.length)return;var old=btn.textContent;btn.disabled=true;btn.textContent='جارٍ التجهيز…';
+  try{
+    var pdf=new window.jspdf.jsPDF({orientation:'landscape',unit:'mm',format:'a4'});var host=document.getElementById('printHost');
+    try{await document.fonts.ready;}catch(e){}
+    for(var i=0;i<list.length;i++){host.innerHTML=sheetHTML(list[i]);
+      var cv=await html2canvas(host.firstElementChild,{scale:2,backgroundColor:'#ffffff',useCORS:true,logging:false});
+      if(i)pdf.addPage();pdf.addImage(cv.toDataURL('image/jpeg',0.92),'JPEG',0,0,297,210);}
+    host.innerHTML='';
+    var name=list.length===1?('متابعة أهداف - '+(list[0].name||'موظفة')):'متابعة أهداف المساعدات الإداريات';
+    await downloadsCap.save({filename:name.replace(/[\\/:*?"<>|]/g,'')+'.pdf',data:pdf.output('blob')});
+    toast('تم تجهيز ملف PDF');
+  }catch(err){var c=err&&err.code;if(c==='declined'){}else if(c==='rate_limited')toast('هناك نافذة حفظ مفتوحة بالفعل.');else toast('تعذّر تصدير PDF.');}
+  btn.disabled=false;btn.textContent=old;
+}
+
+render();
+downloadsCap={save:function(o){var bl=o.data instanceof Blob?o.data:new Blob([o.data],{type:/\.json$/.test(o.filename)?'application/json':'application/octet-stream'});var u=URL.createObjectURL(bl);var l=document.createElement('a');l.href=u;l.download=o.filename;document.body.appendChild(l);l.click();setTimeout(function(){URL.revokeObjectURL(u);l.remove();},1500);return Promise.resolve({status:'saved'});}};
+capsReady=true;render();
+})();
+</script>
+</body>
+</html>
